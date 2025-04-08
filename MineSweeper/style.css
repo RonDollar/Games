@@ -1,0 +1,62 @@
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 30px); /* Adjust column count and cell size */
+    grid-template-rows: repeat(20, 30px); /* Adjust row count and cell size */
+    gap: 2px;
+    margin: 20px auto;
+    justify-content: center;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 30px; /* Adjust cell size */
+    height: 30px; /* Adjust cell size */
+    background-color: #ccc;
+    border: 1px solid #999;
+    font-size: 12px; /* Make text smaller for numbers */
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.cell.revealed {
+    background-color: #eee;
+    cursor: default;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+/*
+h1 {
+    margin: 20px 0;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    margin: 20px auto;
+    justify-content: center;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border: 1px solid #999;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.cell.revealed {
+    background-color: #eee;
+    cursor: default;
+}*/
