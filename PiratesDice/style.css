@@ -1,0 +1,217 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2c3e50; /* Pirate vibe with a dark background */
+    color: white;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px black;
+}
+
+#game-area {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Position players around the circular table */
+#game-table {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: #8b5e3c;
+    border: 10px solid #5d3b24;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust player positioning */
+.player {
+    position: absolute;
+    text-align: center;
+    width: 80px;
+    height: 100px; /* Adjust height to fit the image and name */
+    transform-origin: center center;
+}
+
+/* Position each player at specific angles */
+#player-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translate(0, -160px) rotate(0deg);
+}
+
+#player-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(72deg) translate(0, -160px) rotate(-72deg);
+}
+
+#player-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(144deg) translate(0, -160px) rotate(-144deg);
+}
+
+#player-4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(216deg) translate(0, -160px) rotate(-216deg);
+}
+
+#player-5 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(288deg) translate(0, -160px) rotate(-288deg);
+}
+
+/* Adjust player image styles */
+.player img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    border: 2px solid white;
+}
+
+/* Remove the cup styles */
+.player .cup {
+    display: none;
+}
+
+#actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    box-shadow: 0 4px #c0392b;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#actions button:hover {
+    background-color: #c0392b;
+}
+
+#actions button:active {
+    transform: translateY(4px);
+}
+
+/* Dice container styling */
+#human-dice {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Dice styling */
+.dice {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dot styling */
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Dot positions */
+.dot.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot.top-left {
+    top: 20%;
+    left: 20%;
+}
+
+.dot.top-right {
+    top: 20%;
+    right: 20%;
+}
+
+.dot.bottom-left {
+    bottom: 20%;
+    left: 20%;
+}
+
+.dot.bottom-right {
+    bottom: 20%;
+    right: 20%;
+}
+
+.dot.middle-left {
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+}
+
+.dot.middle-right {
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+/* Legend styling */
+#legend {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1abc9c;
+    color: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.6;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#legend h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#legend ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 500px) {
+    #game-table {
+        width: 95%;
+        height: auto;
+    }
+    #human-dice {
+        flex-direction: column;
+    }
+}
